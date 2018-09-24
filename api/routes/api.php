@@ -17,6 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('proyectos', 'ProyectosController')->only([
-    'index', 'store'
+Route::resource('roles', 'CatRolesController')->only([
+    'index', 'show'
+]);
+
+Route::resource('personas', 'PersonasController')->only([
+    'index'
 ]);

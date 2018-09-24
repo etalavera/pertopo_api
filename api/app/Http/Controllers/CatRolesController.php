@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Proyectos;
+use App\Cat_Roles;
 use Illuminate\Http\Request;
 
-class ProyectosController extends Controller
+class CatRolesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +15,8 @@ class ProyectosController extends Controller
     public function index()
     {
         //
+        $roles = Cat_Roles::all()->toArray();
+        return response()->json($roles);
     }
 
     /**
@@ -41,21 +43,23 @@ class ProyectosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Cat_Roles  $cat_Roles
      * @return \Illuminate\Http\Response
      */
-    public function show(Proyectos $proyectos)
+    public function show($id_rol)
     {
         //
+        $roles = Cat_Roles::where('id', $id_rol)->get();
+        return response()->json($roles);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Cat_Roles  $cat_Roles
      * @return \Illuminate\Http\Response
      */
-    public function edit(Proyectos $proyectos)
+    public function edit(Cat_Roles $cat_Roles)
     {
         //
     }
@@ -64,10 +68,10 @@ class ProyectosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Cat_Roles  $cat_Roles
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Proyectos $proyectos)
+    public function update(Request $request, Cat_Roles $cat_Roles)
     {
         //
     }
@@ -75,10 +79,10 @@ class ProyectosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Cat_Roles  $cat_Roles
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Proyectos $proyectos)
+    public function destroy(Cat_Roles $cat_Roles)
     {
         //
     }

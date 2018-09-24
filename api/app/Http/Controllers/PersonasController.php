@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Proyectos;
+use App\Personas;
 use Illuminate\Http\Request;
 
-class ProyectosController extends Controller
+class PersonasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +15,8 @@ class ProyectosController extends Controller
     public function index()
     {
         //
+        $personas = Personas::all()->toArray();
+        return response()->json($personas);
     }
 
     /**
@@ -41,10 +43,10 @@ class ProyectosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Personas  $personas
      * @return \Illuminate\Http\Response
      */
-    public function show(Proyectos $proyectos)
+    public function show(Personas $personas)
     {
         //
     }
@@ -52,10 +54,10 @@ class ProyectosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Personas  $personas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Proyectos $proyectos)
+    public function edit(Personas $personas)
     {
         //
     }
@@ -64,10 +66,10 @@ class ProyectosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Personas  $personas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Proyectos $proyectos)
+    public function update(Request $request, Personas $personas)
     {
         //
     }
@@ -75,10 +77,10 @@ class ProyectosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Proyectos  $proyectos
+     * @param  \App\Personas  $personas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Proyectos $proyectos)
+    public function destroy(Personas $personas)
     {
         //
     }
