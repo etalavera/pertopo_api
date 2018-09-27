@@ -16,16 +16,6 @@ class CreateProyectosTable extends Migration
         Schema::create('proyectos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombreProyecto');
-            $table->string('liderProyecto');
-            $table->string('lugar');
-            $table->string('municipio');
-            $table->string('estado');
-            $table->string('hizoElTrato');
-            $table->string('nombreOperador');
-            $table->string('maquina');
-            $table->string('cliente');
-            $table->date('fechaInicio');
-            $table->date('fechaFin');
             $table->timestamps();
         });
     }

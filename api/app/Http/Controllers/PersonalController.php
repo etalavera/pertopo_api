@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Personas;
+use App\Personal;
 use Illuminate\Http\Request;
 
-class PersonasController extends Controller
+class PersonalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,6 @@ class PersonasController extends Controller
     public function index()
     {
         //
-        $personas = Personas::all()->toArray();
-        return response()->json($personas);
     }
 
     /**
@@ -43,10 +41,10 @@ class PersonasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Personas  $personas
+     * @param  \App\Personal  $personal
      * @return \Illuminate\Http\Response
      */
-    public function show(Personas $personas)
+    public function show(Personal $personal)
     {
         //
     }
@@ -54,10 +52,10 @@ class PersonasController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Personas  $personas
+     * @param  \App\Personal  $personal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Personas $personas)
+    public function edit(Personal $personal)
     {
         //
     }
@@ -66,10 +64,10 @@ class PersonasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Personas  $personas
+     * @param  \App\Personal  $personal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Personas $personas)
+    public function update(Request $request, Personal $personal)
     {
         //
     }
@@ -77,10 +75,10 @@ class PersonasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Personas  $personas
+     * @param  \App\Personal  $personal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Personas $personas)
+    public function destroy(Personal $personal)
     {
         //
     }

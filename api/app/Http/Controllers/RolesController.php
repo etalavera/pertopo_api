@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Cat_Roles;
+use App\Roles;
 use Illuminate\Http\Request;
 
-class CatRolesController extends Controller
+class RolesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,6 @@ class CatRolesController extends Controller
     public function index()
     {
         //
-        $roles = Cat_Roles::all()->toArray();
-        return response()->json($roles);
     }
 
     /**
@@ -43,23 +41,21 @@ class CatRolesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cat_Roles  $cat_Roles
+     * @param  \App\Roles  $roles
      * @return \Illuminate\Http\Response
      */
-    public function show($id_rol)
+    public function show(Roles $roles)
     {
         //
-        $roles = Cat_Roles::where('id', $id_rol)->get();
-        return response()->json($roles);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Cat_Roles  $cat_Roles
+     * @param  \App\Roles  $roles
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cat_Roles $cat_Roles)
+    public function edit(Roles $roles)
     {
         //
     }
@@ -68,10 +64,10 @@ class CatRolesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cat_Roles  $cat_Roles
+     * @param  \App\Roles  $roles
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cat_Roles $cat_Roles)
+    public function update(Request $request, Roles $roles)
     {
         //
     }
@@ -79,10 +75,10 @@ class CatRolesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cat_Roles  $cat_Roles
+     * @param  \App\Roles  $roles
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cat_Roles $cat_Roles)
+    public function destroy(Roles $roles)
     {
         //
     }
