@@ -17,10 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('roles', 'CatRolesController')->only([
+Route::resource('clientes', 'ClientesController')->only([
     'index', 'show'
 ]);
 
-Route::resource('personas', 'PersonasController')->only([
+Route::resource('personas', 'PersonalesController')->only([
     'index'
 ]);
