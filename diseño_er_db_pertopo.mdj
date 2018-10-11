@@ -123,7 +123,7 @@
 									"top": 37,
 									"width": 193.26806640625,
 									"height": 13,
-									"text": "staff_roles"
+									"text": "roles_staff"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -1838,7 +1838,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFmHmKamx4/Jxg="
 					},
-					"name": "staff_roles",
+					"name": "roles_staff",
 					"columns": [
 						{
 							"_type": "ERDColumn",
